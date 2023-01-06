@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
@@ -15,34 +14,21 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-camera.position.z = 8;
+camera.position.z = 35;
 
+//  const controls = new OrbitControls(camera, renderer.domElement);
 
- const controls = new OrbitControls(camera, renderer.domElement);
-
-const loader = new GLTFLoader();
-loader.load('./silent_ash/scene.gltf', (gltf) => {
-  gltf.scene.scale.setScalar(0.8);
-  gltf.scene.traverse(c => {
-    c.castShadow = true;
+ const loader = new GLTFLoader();
+ loader.load('./earthquakes/scene.gltf', (gltf) => {
+   gltf.scene.scale.setScalar(0.2);
+   gltf.scene.traverse(c => {
+     c.castShadow = true;
   });
 
-  gltf.scene.position.y = 1;
-
-  scene.add(gltf.scene);
-});
-
-//  const fbxLoader = new FBXLoader();
-//  fbxLoader.load('./dancer/girl.fbx', (fbx) => {
-//    fbx.scale.setScalar(0.007);
-//    fbx.traverse(c => {
-//     c.castShadow = true;
-//   });
-  
-//   fbx.position.x = -1;
-//   fbx.position.y = 1;
-//    scene.add(fbx);
-//  });
+   gltf.scene.position.y = 0;
+   
+   scene.add(gltf.scene);
+ });
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1.3);
 scene.add(ambientLight);
@@ -54,11 +40,10 @@ const particlesCount = 50000
 const posArray = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
-    posArray[i] = (Math.random() - 0.5) * 10
+    posArray[i] = (Math.random() - 0.5) * 50
 }
 
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
-
 
 const particlesMaterial = new THREE.PointsMaterial({
     color: 0x604df5,
@@ -74,13 +59,25 @@ pointlight.position.y = 3
 pointlight.position.z = 4
 scene.add(pointlight)
 
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+  
+
+  camera.position.y = t * -0.02;
+  
+}
+
+document.body.onscroll = moveCamera;
+moveCamera();
+
+
+
 function animate() {
   requestAnimationFrame(animate);
 
-   controls.update();
+  //  controls.update();
 
   particlesMesh.rotation.y -= 0.0005
-
 
   renderer.render(scene, camera);
 }
