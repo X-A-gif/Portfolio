@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 canvas {
   position: fixed;
@@ -7,8 +8,22 @@ canvas {
   outline: none;
 }
 
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo img {
+  cursor: pointer;
+  height: 80px;
+  margin-top: 1rem;
+}
+
 html,
 body {
+  margin: 0;
   height: 100vh;
   font-family: 'Poppins';
   background: rgb(84,87,88);
@@ -30,8 +45,9 @@ body {
   width: 100%;
   margin: 0;
   padding-top: 0.4em;
-  position: relative;
+  position: absolute;
   color: #fff;
+  margin-top: 20rem;
 }
 
 .content:before {
@@ -50,6 +66,16 @@ h1 {
   width: 50vw;
   line-height: 97%;
   text-align: right;
+
+
+  color: #000000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  background-image: url("backtest.jpg");
+  background-size: 120%;
+  animation: bg-animation 30s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 h1, p {
@@ -62,3 +88,55 @@ p {
   font-size: 1.3rem;
   width: 40vw;
 }
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 2em;
+  position: fixed;
+  right: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin-right: 1.4rem;
+}
+
+nav li {
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+nav li a {
+  text-decoration: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, rgba(121,121,121,1) 0%, rgba(158,0,0,1) 46%, rgba(136,136,136,1) 100%);
+  font-family: Montserrat,Arial;
+  font-weight: 1000;
+}
+
+.whoAmI {
+  margin-top: 400rem;
+}
+
+/* .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100rem;
+}
+
+.sect1 {
+  margin-top: 270rem;
+  margin-bottom: 20rem;
+} */
