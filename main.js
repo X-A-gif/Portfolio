@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 
-
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
@@ -16,9 +15,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
 camera.position.z = 8;
 
-
- const controls = new OrbitControls(camera, renderer.domElement);
-
 const loader = new GLTFLoader();
 loader.load('./silent_ash/scene.gltf', (gltf) => {
   gltf.scene.scale.setScalar(0.8);
@@ -31,21 +27,8 @@ loader.load('./silent_ash/scene.gltf', (gltf) => {
   scene.add(gltf.scene);
 });
 
-//  const fbxLoader = new FBXLoader();
-//  fbxLoader.load('./dancer/girl.fbx', (fbx) => {
-//    fbx.scale.setScalar(0.007);
-//    fbx.traverse(c => {
-//     c.castShadow = true;
-//   });
-  
-//   fbx.position.x = -1;
-//   fbx.position.y = 1;
-//    scene.add(fbx);
-//  });
-
 const ambientLight = new THREE.AmbientLight(0xffffff, 1.3);
 scene.add(ambientLight);
-
 
 const particlesGeometry = new THREE.BufferGeometry()
 const particlesCount = 50000
@@ -75,8 +58,6 @@ scene.add(pointlight)
 
 function animate() {
   requestAnimationFrame(animate);
-
-   controls.update();
 
   particlesMesh.rotation.y -= 0.0005
 
