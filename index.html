@@ -10,43 +10,42 @@
 
   <main>
 
-    <div class="nav">
+    <div>
        <div class="logo">
         <img src="./Rr.png" alt="logo" />
       </div>
-      
-      <nav>
+    
+      <nav class="nav">
         <ul>
-          <li><a href="#moveModel">Who Am I</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-
     </div>
 
     <div class="container">
       <div class="content">
           <h1>Reese<br>Rickerson</h1>
-          <p>Journey through the next dimension</p>
+      </div>
     </div>
     
+    <div class="navSection">
+      <section>
+      <ul class="Nv">
+        <li>MOTION ANIMATION</li>
+        <li>3D DESIGN</li>
+        <li>BLENDER</li>
+        <li>THREE js</li>
+      </ul>
+    </section>
+    </div>
 
+    <!-- <div class="about">
+      <section>
+        much about me
+      </section>
+    </div> -->
 
-      <div class="whoAmI">
-        <section>
-          <h2 id="moveModel">Who Am I</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptates, quod, quia, voluptate quae voluptatem quibusdam
-            voluptatibus quos quas quidem nesciunt. Quisquam, quae. Quisquam
-            voluptates, quod, quia, voluptate quae voluptatem quibusdam
-            voluptatibus quos quas quidem nesciunt. Quisquam, quae.
-          </p>
-        </section>
-      </div>
-  </div>
   </main>
 
     <canvas id="canvas"></canvas>
@@ -60,11 +59,10 @@
 
       const content = CSSRulePlugin.getRule(".content:before")
       const h1 = document.querySelector("h1")
-      const p = document.querySelector("p")
       const tl = gsap.timeline()
 
       tl.from(content, { delay: .5, duration: 4,cssRule: {scaleX: 0}})
-      tl.to(h1, {duration: 2, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }, "+=2")
+      tl.to(h1, {duration: 2, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }, "+=-6")
 
     </script>
 

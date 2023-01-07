@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cyberpunk VR head rig
+* source:	https://sketchfab.com/3d-models/cyberpunk-vr-head-rig-dbaf4b552a814f1ea7b27e4488a0c9f2
+* author:	DEDROX (https://sketchfab.com/Raghavprasanna)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cyberpunk VR head rig" (https://sketchfab.com/3d-models/cyberpunk-vr-head-rig-dbaf4b552a814f1ea7b27e4488a0c9f2) by DEDROX (https://sketchfab.com/Raghavprasanna) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
