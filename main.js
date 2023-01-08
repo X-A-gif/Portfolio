@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -28,9 +28,7 @@ const loader = new GLTFLoader();
 loader.load('./cyberpunk_vr_head_rig/scene.gltf', (gltf) => {
   gltf.scene.scale.setScalar(1.4);
   gltf.scene.traverse(c => {
-    // if (c.isMesh) {
-    //   c.material = material;
-    // }
+  
   });
   
   gltf.scene.position.z = 0;
@@ -38,6 +36,7 @@ loader.load('./cyberpunk_vr_head_rig/scene.gltf', (gltf) => {
   gltf.scene.rotateY(Math.PI);
   scene.add(gltf.scene);
 });
+
 
 
 function animate() {
