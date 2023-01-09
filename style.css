@@ -34,7 +34,7 @@ canvas {
 html,
 body {
   margin: 0;
-  height: 100vh;
+  padding: 0;
   font-family: 'Poppins';
   background: rgb(45,45,45);
   background: linear-gradient(155deg, rgba(45,45,45,1) 0%, rgba(0,0,0,1) 76%);
@@ -148,9 +148,11 @@ nav li a {
 .body-section {
   position: absolute;
   bottom: 0;
-  margin-bottom: -10rem;
+  margin-bottom: -15rem;
   margin-left: 30rem;
   color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
 }
 
 .image {
@@ -181,18 +183,18 @@ nav li a {
 .bill {
   position: absolute;
   bottom: 0;
-  margin-bottom: -30rem;
+  margin-bottom: -28rem;
   margin-left: 4rem;
 }
 
 .bill img {
-  height: 400px;
+  height: 330px;
   width: 335px;
 }
 
 .footer {
   position: relative;
-  top: 66rem;
+  top: 75rem;
   margin-bottom: 10rem;
   padding-bottom: 10rem;
   margin-left: 35rem;
@@ -203,24 +205,34 @@ nav li a {
   color: #f7e6e6;
 }
 
-
-/* Small screen (600px and below) */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
+.icons {
+  position: relative;
+  margin-top: 65rem;
+  margin-left: 40rem;
 }
 
-/* Medium screen (601px - 900px) */
-@media only screen and (min-width: 601px) and (max-width: 900px) {
+.icons img {
+  height: 15px;
+  width: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .body-section {
+    display: block;
+  }
+} 
+
+
+/* @media only screen and (min-width: 601px) and (max-width: 900px) {
   body {
     font-size: 16px;
   }
-}
+}  */
 
-/* Large screen (901px and above) */
-@media only screen and (min-width: 901px) {
-  body {
-    font-size: 18px;
+
+@media only screen and (min-width: 850px) {
+  .container .content {
+ 
   }
 }
+
