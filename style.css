@@ -208,7 +208,7 @@ nav li a {
 
 .icons {
   position: relative;
-  margin-top: 65rem;
+  margin-top: 75rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -219,38 +219,68 @@ nav li a {
   width: 40px;
 }
 
-.card {
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: transparent;
   position: absolute;
   bottom: 0;
-  margin-bottom: -27rem;
-  margin-left: 31rem;
+  margin-bottom: -32rem;
   background-size: cover;
   background-position: center;
-  border: solid 5px#f7e6e6;
+}
+
+.card {
+  color: #f7e6e6;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  margin: 20px;
+  flex: 0 0 300px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.8s, transform 0.8s;
+
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* .card {
+  background-size: cover;
+  background-position: center;
+   border: solid 5px#f7e6e6;
   height: 250px;
   width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  
-}
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.8s, transform 0.8s;
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -rem;
+}  
+ */
 
-.card-image {
-  cursor: pointer;
-  grid-area: image;
-  text-align: center;
-  color: white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-}
-.card-text {
-  grid-area: text;
-}
-.card-stats {
-  grid-area: stats;
-}
 
 @media only screen and (max-width: 600px) {
   .body-section {
