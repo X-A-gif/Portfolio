@@ -199,7 +199,7 @@ nav li a {
 
 .footer {
   position: relative;
-  top: 70rem;
+  top: 85em;
   margin-bottom: 10rem;
   margin-left: auto;
   margin-right: auto;
@@ -213,7 +213,7 @@ nav li a {
 
 .icons {
   position: relative;
-  margin-top: 75rem;
+  margin-top: 85rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -235,7 +235,7 @@ nav li a {
   background-color: transparent;
   position: absolute;
   bottom: 0;
-  margin-bottom: -32rem;
+  margin-bottom: -40rem;
   
 }
 
@@ -262,28 +262,6 @@ nav li a {
 .card img {
   width: 100%;
 }
-
-/* .card {
-  background-size: cover;
-  background-position: center;
-   border: solid 5px#f7e6e6;
-  height: 250px;
-  width: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 25px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.8s, transform 0.8s;
-  width: 25%;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: -rem;
-}  
- */
 
 
 @media only screen and (max-width: 600px) {
