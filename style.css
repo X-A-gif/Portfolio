@@ -185,18 +185,6 @@ nav li a {
   transform: rotate(90deg);
 }
 
-.bill {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: -28rem;
-  margin-left: 4rem;
-}
-
-.bill img {
-  height: 330px;
-  width: 335px;
-}
-
 .footer {
   position: relative;
   top: 85em;
