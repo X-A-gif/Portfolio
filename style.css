@@ -196,7 +196,9 @@ nav li a {
   position: relative;
   top: 70rem;
   margin-bottom: 10rem;
-  margin-left: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   color: rgb(255, 233, 233);
 }
 
@@ -207,7 +209,9 @@ nav li a {
 .icons {
   position: relative;
   margin-top: 65rem;
-  margin-left: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .icons img {
@@ -215,7 +219,38 @@ nav li a {
   width: 40px;
 }
 
+.card {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -27rem;
+  margin-left: 31rem;
+  background-size: cover;
+  background-position: center;
+  border: solid 5px#f7e6e6;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+}
 
+.card-image {
+  cursor: pointer;
+  grid-area: image;
+  text-align: center;
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card-text {
+  grid-area: text;
+}
+.card-stats {
+  grid-area: stats;
+}
 
 @media only screen and (max-width: 600px) {
   .body-section {
